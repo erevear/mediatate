@@ -1,0 +1,5 @@
+1.3 The difference between these two images is that the first one loads with a version number that is different everyime and therefore will not be cached. In order to make sure that the second one also loads with version information we have to move the javascript that assigns the number to a spot in the file after the image itself loads.
+
+3.2 Yes, since this CSS is within the html file it will possibly load faster than that in the external CSS file as nothing extra needs to be loaded into the browser.
+
+4. This experiment is to see how the call to action of signing up for a newsletter is best received. One group of users will see a pop up that asks them to sign up when they arrive on the page. The other will see the form when they get to the bottom of the article.

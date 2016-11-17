@@ -23,73 +23,134 @@
     }
 </script>
 <style media="screen" type="text/css">
-.header {
-    background-color: #f0f0f0;
-    text-align: center;
+#previous-slide{
+  float:left;
+}
+
+#next-slide{
+  float:right;
+}
+
+.centered-text{
+  text-align: center;
+}
+
+.slide{
+  width:100%;
+  background-color: black;
+  display:none;
+  color:white;
+  margin-top: 10px;
+}
+
+.img-responsive{
+  margin: 0 auto;
+}
+
+#show-slide{
+  display: none;
+}
+
+.like{
+  text-decoration: none;
+  color:white;
+  background-color: black;
+  border:none;
+}
+
+.caption {
+  height: 50px;
 }
 </style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/mediatate.css"/>
+
 </head>
 <body>
-
-    <script>
+<script>
         sleep(7000);
         //alert("hoho");
     </script>
+    <div class="header">
+      Header Bar
+    </div>
+    <div class = "fluid-container">
+      <div id = "image-container" class = "row">
+      <div class = "col-xs-6 col-md-6 col-md-offset-3 col-xs-offset-3">
+          <div id = "slide-1" class = "slide">
+            <img class="img img-responsive" id="image-1" src="https://s-media-cache-ak0.pinimg.com/736x/4b/fe/44/4bfe443c1db09c0943de27164783e4fc.jpg">
+            <p class="caption centered-text" id="image-1-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ullamcorper ante. Quisque sit amet mauris facilisis, placerat nisl   finibus, euismod felis. </p>
+            <button class="like" id="image-1-likes"><span class="glyphicon glyphicon-thumbs-up"></span><span class="num_likes">0</span></button>
+          </div>
+          <div id = "slide-2" class = "slide">
+            <img class="img img-responsive" id="image-2" src="https://s-media-cache-ak0.pinimg.com/736x/4b/fe/44/4bfe443c1db09c0943de27164783e4fc.jpg">
+            <p class="caption centered-text" id="image-2-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="like" id="image-2-likes"><span class="glyphicon glyphicon-thumbs-up"></span><span class="num_likes">0</span></button>
+          </div>
+          <button id = "previous-slide" type="button" class="btn btn-default btn-lg slideshow-control"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button>
+          <button id = "next-slide" type="button" class="btn btn-default btn-lg slideshow-control"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
+          <p class = "centered-text"><a id = "show-list" href="#">[Switch to listview]</a></p>
+          <p class = "centered-text"><a id = "show-slide" href="#">[Switch to slideshow]</a></p>
+        </div>
+      </div>
+      <div class = "row" id="content">
+        <p class = "col-xs-8 col-md-4 col-md-offset-2 col-xs-offset-2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ullamcorper ante. Quisque sit amet mauris facilisis, placerat nisl finibus, euismod felis. Fusce tristique felis augue, quis ultricies augue iaculis vel. Ut volutpat orci a mauris rutrum consectetur. Curabitur consequat, dui sed tincidunt scelerisque, augue tortor vehicula turpis, porttitor viverra nulla arcu gravida magna. In auctor, ex quis rutrum iaculis, velit urna gravida ante, nec tristique mi mi eget ex. Ut eu nisl in augue dapibus consequat. Aenean faucibus blandit metus et volutpat. Sed nec dolor auctor, venenatis velit id, rhoncus ipsum. Proin congue, magna a viverra maximus, felis nisl efficitur ipsum, sit amet bibendum mauris mi sed diam.
+        </p>
+        <p class = "col-xs-8 col-md-4 col-md-offset-0 col-xs-offset-2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ullamcorper ante. Quisque sit amet mauris facilisis, placerat nisl finibus, euismod felis. Fusce tristique felis augue, quis ultricies augue iaculis vel. Ut volutpat orci a mauris rutrum consectetur. Curabitur consequat, dui sed tincidunt scelerisque, augue tortor vehicula turpis, porttitor viverra nulla arcu gravida magna.
+        </p>
+      </div>
+      <div class = "row">
+        <p class = "col-xs-8 col-md-4 col-md-offset-2 col-xs-offset-2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ullamcorper ante. Quisque sit amet mauris facilisis, placerat nisl finibus, euismod felis. Fusce tristique felis augue, quis ultricies augue iaculis vel. Ut volutpat orci a mauris rutrum consectetur. Curabitur consequat, dui sed tincidunt scelerisque, augue tortor vehicula turpis, porttitor viverra nulla arcu gravida magna. In auctor, ex quis rutrum iaculis, velit urna gravida ante, nec tristique mi mi eget ex. Ut eu nisl in augue dapibus consequat. Aenean faucibus blandit metus et volutpat. Sed nec dolor auctor, venenatis velit id, rhoncus ipsum. Proin congue, magna a viverra maximus, felis nisl efficitur ipsum, sit amet bibendum mauris mi sed diam.
+        </p>
+        <p class = "col-xs-8 col-md-4 col-md-offset-0 col-xs-offset-2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ullamcorper ante. Quisque sit amet mauris facilisis, placerat nisl finibus, euismod felis. Fusce tristique felis augue, quis ultricies augue iaculis vel. Ut volutpat orci a mauris rutrum consectetur. Curabitur consequat, dui sed tincidunt scelerisque, augue tortor vehicula turpis, porttitor viverra nulla arcu gravida magna.
+        </p>
+        <p class = "col-xs-8 col-md-4 col-md-offset-0 col-xs-offset-2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ullamcorper ante. Quisque sit amet mauris facilisis, placerat nisl finibus, euismod felis. Fusce tristique felis augue, quis ultricies augue iaculis vel. Ut volutpat orci a mauris rutrum consectetur. Curabitur consequat, dui sed tincidunt scelerisque, augue tortor vehicula turpis, porttitor viverra nulla arcu gravida magna. In auctor, ex quis rutrum iaculis, velit urna gravida ante, nec tristique mi mi eget ex. Ut eu nisl in augue dapibus consequat. Aenean faucibus blandit metus et volutpat. Sed nec dolor auctor, venenatis velit id, rhoncus ipsum. Proin congue, magna a viverra maximus, felis nisl efficitur ipsum, sit amet bibendum mauris mi sed diam.
+        </p>
+      </div>
+      <div class = "row" id="submit_email_container">
+        <div class = "col-xs-9 col-md-9 col-md-offset-1 col-xs-offset-1">
+          <form id = "email-form">
+            <p>Like our content? Enter your email to get our newsletter</p>
+            <input name="email" type="text">
+            <input id = "submit-email" type="button" value = "Submit">
+          </form>
+          <button id = "close">Close</button>
+          <div id="thankyou" style="display:none;">
+            <p>Thank you for signing up for our newsletter! You'll get it soon!</p>
+          </div>
+        </div>
+      </div>
+      <div class = "row" id="footer">
+        <div class = "col-xs-6 col-md-6 col-md-offset-1 col-xs-offset-1">
+          <span>CompanyName</span>
+            <ul>
+              <li><a href="">Lorem</a></li>
+              <li><a href="">Ipsumbook</a></li>
+              <li><a href="">Dolorgram</a></li>
+              <li><a href="">Magna</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
     <script language="javascript" type="text/javascript">
         var d = new Date();
         document.getElementById("image-2").src =
           "https://s-media-cache-ak0.pinimg.com/736x/4b/fe/44/4bfe443c1db09c0943de27164783e4fc.jpg?ver=" +
            d.getTime();
     </script>
-    <div class="header">
-        Header Bar
-    </div>
-    <div>
-        <img id="image-1" src="https://s-media-cache-ak0.pinimg.com/736x/4b/fe/44/4bfe443c1db09c0943de27164783e4fc.jpg">
-    </div>
-    <div id="image-1-caption">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ullamcorper ante. Quisque sit amet mauris facilisis, placerat nisl finibus, euismod felis. </p>
-    </div>
-    <div>
-        <img id="image-2" src="https://s-media-cache-ak0.pinimg.com/736x/4b/fe/44/4bfe443c1db09c0943de27164783e4fc.jpg">
-    </div>
-    <div id="image-2-caption">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ullamcorper ante. Quisque sit amet mauris facilisis, placerat nisl finibus, euismod felis. Fusce tristique felis augue, quis ultricies augue iaculis vel. Ut volutpat orci a mauris rutrum consectetur. Curabitur consequat, dui sed tincidunt scelerisque, augue tortor vehicula turpis, porttitor viverra nulla arcu gravida magna. In auctor, ex quis rutrum iaculis, velit urna gravida ante, nec tristique mi mi eget ex. Ut eu nisl in augue dapibus consequat. Aenean faucibus blandit metus et volutpat. Sed nec dolor auctor, venenatis velit id, rhoncus ipsum. Proin congue, magna a viverra maximus, felis nisl efficitur ipsum, sit amet bibendum mauris mi sed diam.
-    </p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ullamcorper ante. Quisque sit amet mauris facilisis, placerat nisl finibus, euismod felis. Fusce tristique felis augue, quis ultricies augue iaculis vel. Ut volutpat orci a mauris rutrum consectetur. Curabitur consequat, dui sed tincidunt scelerisque, augue tortor vehicula turpis, porttitor viverra nulla arcu gravida magna.
-    </p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ullamcorper ante. Quisque sit amet mauris facilisis, placerat nisl finibus, euismod felis. Fusce tristique felis augue, quis ultricies augue iaculis vel. Ut volutpat orci a mauris rutrum consectetur. Curabitur consequat, dui sed tincidunt scelerisque, augue tortor vehicula turpis, porttitor viverra nulla arcu gravida magna. In auctor, ex quis rutrum iaculis, velit urna gravida ante, nec tristique mi mi eget ex. Ut eu nisl in augue dapibus consequat. Aenean faucibus blandit metus et volutpat. Sed nec dolor auctor, venenatis velit id, rhoncus ipsum. Proin congue, magna a viverra maximus, felis nisl efficitur ipsum, sit amet bibendum mauris mi sed diam.
-    </p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ullamcorper ante. Quisque sit amet mauris facilisis, placerat nisl finibus, euismod felis. Fusce tristique felis augue, quis ultricies augue iaculis vel. Ut volutpat orci a mauris rutrum consectetur. Curabitur consequat, dui sed tincidunt scelerisque, augue tortor vehicula turpis, porttitor viverra nulla arcu gravida magna.
-    </p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ullamcorper ante. Quisque sit amet mauris facilisis, placerat nisl finibus, euismod felis. Fusce tristique felis augue, quis ultricies augue iaculis vel. Ut volutpat orci a mauris rutrum consectetur. Curabitur consequat, dui sed tincidunt scelerisque, augue tortor vehicula turpis, porttitor viverra nulla arcu gravida magna. In auctor, ex quis rutrum iaculis, velit urna gravida ante, nec tristique mi mi eget ex. Ut eu nisl in augue dapibus consequat. Aenean faucibus blandit metus et volutpat. Sed nec dolor auctor, venenatis velit id, rhoncus ipsum. Proin congue, magna a viverra maximus, felis nisl efficitur ipsum, sit amet bibendum mauris mi sed diam.
-    </p>
-    <form>
-    <input name="email" type="text">
-    <input type="submit">
-    </form>
-    <div id="footer">
-        <span>CompanyName</span>
-        <ul>
-            <li><a href="">Lorem</a></li>
-            <li><a href="">Ipsumbook</a></li>
-            <li><a href="">Dolorgram</a></li>
-            <li><a href="">Magna</a></li>
-        </ul>
-    </div>
     <script language="javascript" type="text/javascript">
-        var d = new Date();
-        document.getElementById("image-1").src =
-          "https://s-media-cache-ak0.pinimg.com/736x/4b/fe/44/4bfe443c1db09c0943de27164783e4fc.jpg?ver=" +
-           d.getTime();
+      var d = new Date();
+      document.getElementById("image-1").src =
+      "https://s-media-cache-ak0.pinimg.com/736x/4b/fe/44/4bfe443c1db09c0943de27164783e4fc.jpg?ver=" +
+      d.getTime();
     </script>
-
+    <script src="js/mediatate.js"></script>
 </body>
 </html>
